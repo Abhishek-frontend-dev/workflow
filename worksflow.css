@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "ProximaNova";
+  font-family:ProximaNovaaltBold;
   src: url(font/ProximaNovaAltBold.otf);
 }
 
 @font-face {
-  font-family: "ProximaNovaRegular";
+  font-family: ProximaNovaaltRegular;
   src: url(font/Proxima\ Nova\ Alt\ Regular.otf);
 }
 
@@ -20,146 +20,150 @@ strong{
 }
 /* Hero Section */
 .herosection {
-    display: flex;
-    padding: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(images/bannernew.webp);
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+  background: url(images/bannernew.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-left {
-    width: 50%;
-    padding: 0 2rem 0;
-}
-
-.btn-text {
-    font-weight: 400;
-    font-size: 1.2rem;
-    font-family: "ProximaNovaRegular";
-}
-
-.btn-top img {
-    width: 3vw;
+  width: 50%;
+  padding: 0 2rem 0;
 }
 
 .header-heading {
-    font-family: "ProximaNova",monospace;
-    font-size: 2.428rem;
-    color: #1c4496;
+  font-family: ProximaNovaaltBold, monospace;
+  font-size: 2.428rem;
+  color: #1c4496;
 }
 
-.hero-btn {
-    background-color: #e6638a;
-    font-weight: 300;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "ProximaNovaRegular", Helvetica, sans-serif;
-    transition: all ease 0.5s;
-    font-size: 1rem;
-    padding: 9px 15px;
-    margin: 0px 16px 0px 0px;
+.hero-btn, .hero-btn-sign-up {
+  background-color: #e6638a;
+  font-weight: 300;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: ProximaNovaaltRegular, Helvetica, sans-serif;
+  transition: all ease 0.5s;
+  font-size: 1rem;
+  padding: 9px 15px;
+  margin: 0 16px 0 0;
+  text-decoration:none;
 }
-.hero-btn:hover{
+
+.hero-btn-sign-up {
+  background-color: #1c4496;
+  text-decoration:none;
+}
+
+.hero-btn:hover,.hero-btn-sign-up:hover{
   box-shadow: 0 0 10px 0 black;
 }
-
-.hero-right{
- width: 50%;
- padding: 0 2rem 0;
+.hero-right {
+  width: 50%;
+  padding: 0 2rem 0;
 }
 
 .hero-right img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-text {
-    font-family: "ProximaNovaRegular", Helvetica, sans-serif;
-    margin-top: 20px 0px;
-    line-height: 2;
-    color: #666666;
-    font-size: 1rem;
-    padding: 0.8rem 0 0.3rem;
+  font-family: ProximaNovaaltRegular, Helvetica, sans-serif;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #666666;
+  font-size: 1rem;
 }
-.hero-sub-text{
- margin: 20px 0px;
+
+.hero-sub-text {
+  margin: 1.25rem 0;
   font-size: 1.5rem;
   display: block;
   color: #091c09;
-  font-family: "ProximaNova",monospace;
+  font-family: ProximaNovaaltBold, monospace;
 }
-
-.header-sapn{
-    color: #e6638a;
-  }
 
 /* Media Queries for Responsiveness */
 
+@media screen and (max-width: 960px) {
+  .herosection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+      padding: 2rem;
+  }
+
+  .hero-left {
+      width: 100%;
+      padding: 0;
+  }
+
+  .hero-right {
+      display: none;
+  }
+
+  .header-heading {
+      font-size: 2rem;
+  }
+
+  .hero-btn, .hero-btn-sign-up {
+      font-size: 1rem;
+      padding: 10px 20px;
+      margin-bottom: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
-    .herosection {
-        padding: 1.3rem;
-        flex-direction: column; 
-        align-items: center; 
-    }
+  .hero-right {
+      display: none;
+  }
 
-    .hero-left {
-        margin: 0;
-        width: 100%;
-        text-align: left; 
-    }
+  .hero-left {
+      padding: 1rem;
+  }
 
-    .header-heading {
-        font-size: 2.5rem; 
-    }
+  .header-heading {
+    font-size: 2.438rem;
+  }
 
-    .hero-btn {
-        font-size: 14px;
-        align-items: center;
-        text-align: center;
-    }
+  .hero-text {
+      font-size: 1rem;
+  }
 
-    .btn-top {
-        margin-bottom: 1rem; 
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-right img {
-        display: none;
-    }
+  .hero-btn, .hero-btn-sign-up {
+      font-size: 1rem;
+      padding: 12px 20px;
+      margin-bottom: 1rem;
+  }
 }
 
-/* For even smaller devices (phones in portrait mode) */
 @media screen and (max-width: 480px) {
-    .header-heading {
-        font-size: 2rem;
-    }
+  .header-heading {
+      font-size: 2.438rem;
+  }
 
-    .hero-btn {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
+  .hero-text {
+      font-size: 1rem;
+  }
 
-    .btn-top {
-        padding: 0.5rem;
-    }
-    .btn-top img{
-     width: 6vw;
-    }
-
-    .btn-text {
-        font-size: 1rem;
-    }
-
-    .hero-text {
-        font-size: 18px;
-    }
+  .hero-btn, .hero-btn-sign-up {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+  }
+  .hero-sub-text{
+    font-size:1.6rem;
+  }
 }
+
+/*hero section end here*/
+
 
 
 /* Task Section Layout */
@@ -173,14 +177,14 @@ strong{
   
   .full-width-heading{
     text-align: center;
-    font-family: "ProximaNova",monospace;
+    font-family: ProximaNovaaltBold,monospace;
     margin: 0px 0px 1.375rem;
     font-size: 2rem;
     color: #091C39;
     font-weight:bolder;
   }
   .full-width-para{
-    font-family: "ProximaNovaRegular", Helvetica, sans-serif;
+    font-family:  ProximaNovaaltRegular, Helvetica, sans-serif;
    font-size: 1.3rem;
    text-align: center;
    color: #666666;
@@ -202,7 +206,7 @@ strong{
   }
 
   .full-width-para{
-    font-family: "ProximaNovaRegular", sans-serif;
+    font-family:  ProximaNovaaltRegular, sans-serif;
     font-size: 1.1rem;
     color: #666666;
   }
@@ -257,7 +261,7 @@ width: 100%;
   .task-text {
     font-size: 1rem;
     color: #666666; 
-    font-family: "ProximaNovaRegular", Helvetica, sans-serif;
+    font-family: ProximaNovaaltRegular, Helvetica, sans-serif;
     padding: 1rem;
   }
   
@@ -442,7 +446,147 @@ width: 100%;
       font-size: 1.2rem;
     }
   }
-  
+
+
+  /*how task tracker work */
+
+.how-it-works {
+  padding: 3.75rem 6.25rem 0rem;
+}
+
+.how-it-works-heading {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #091c39;
+  font-family: ProximaNovaaltBold, monospace;
+  margin-bottom: 2rem;
+}
+
+.how-it-works-step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.step-img {
+  flex: 1;
+  max-width: 40%;
+}
+
+.step-img img {
+  max-width: 100%;
+}
+.step-text {
+  flex: 1;
+  max-width: 100%;
+}
+
+.step-text h3 {
+  font-size: 1.5rem;
+  color: #091c39;
+  margin-bottom: 1rem;
+  font-family: ProximaNovaaltBold, monospace;
+}
+
+.step-text p {
+  font-size: 1.2rem;
+  color: #666666;
+  line-height: 1.6;
+  font-family: ProximaNovaaltRegular, sans-serif;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+  .how-it-works {
+    padding: 2.5rem 3rem;
+  }
+
+  .how-it-works-heading {
+    font-size: 1.5rem;
+  }
+
+  .how-it-works-step {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .step-img {
+    max-width: 100%;
+  }
+
+  .step-text h3 {
+    font-size: 1.25rem;
+  }
+
+  .step-text p {
+    font-size:1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 1.5rem 1rem;
+  }
+
+  .how-it-works-heading {
+    font-size: 1.25rem;
+  }
+
+  .how-it-works-step {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step-img {
+    max-width: 100%;
+  }
+
+  .step-text h3 {
+    font-size: 1.15rem;
+  }
+
+  .step-text p {
+    font-size: 1rem;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works {
+    padding: 1.5rem;
+  }
+
+  .how-it-works-heading {
+    font-size: 1.2rem;
+  }
+
+  .how-it-works-step {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step-img {
+    max-width: 100%;
+  }
+
+  .step-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .step-text p {
+    font-size: 0.95rem;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+    /*how task tracker work end here */
 
   /*ctc- ready-to testimonial*/
   /* Integrations Marquee container start here */
@@ -600,10 +744,60 @@ width: 100%;
     font-weight: bold;
     color: #0078D7;
   }
-  /*try start*/
-  .try{
+  
+    /*try start*/
+.try {
+  display: flex;
+  height: 30vh;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:linear-gradient(130deg,#1c4496,#e6638a);
+  margin: 5.4rem;
+  border-radius: 20px;
+}
+
+.try-left img {
+  width: 20vw;
+}
+
+.try-right {
+  padding: 2rem;
+  width: 50%;
+}
+
+.try-btn {
+  background-color: #e6638a;
+  font-weight: 300;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: ProximaNovaaltRegular, Helvetica, sans-serif;
+  transition: all ease 0.5s;
+  font-size: 1rem;
+  padding: 9px 15px;
+  margin: 10px 16px 0px 0px;
+}
+
+.try-btn:hover {
+  box-shadow: 0 0 10px 0 black;
+}
+
+.try-left-text {
+  font-size: 2rem;
+  font-family: ProximaNovaaltBold, monospace;
+  font-weight: 300;
+  color: #f9f9f9;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1279px) {
+  .try {
     display: flex;
-    height: 25vh;
+    height: 30vh;
     gap: 4rem;
     justify-content:center;
     align-items: center;
@@ -612,249 +806,126 @@ width: 100%;
     margin: 5.4rem;
     border-radius: 20px;
   }
-  
-  .try-left img{
-    width: 18vw;
-  }
-  
-  .try-right{
-    padding: 2rem;
-    width: 50%;
-  }
-  
-  .try-btn{
-    background-color: #e6638a;
-    font-weight: 300;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "ProximaNovaRegular", Helvetica, sans-serif;
-    transition: all ease 0.5s;
-    font-size: 1rem;
-    padding: 9px 15px;
-    margin: 10px 16px 0px 0px;
-  }
-  
-  .try-btn:hover{
-    box-shadow: 0 0 10px 0 black;
-  }
-  
-  .try-left-text{
-    font-size: 2rem;
-    font-family: "ProximaNova",monospace;
-    font-weight: 300;
-    color: #2a3278;;
-  }
-  
-  /* Try Section Styling */
-  .try {
-    display: flex;
-    height: 25vh;
-    gap: 4rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #f9f9f9;
-    margin: 5.4rem;
-    border-radius: 20px;
-  }
-  
+
   .try-left img {
-    width: 18vw;
+    width: 76%;
   }
-  
+
   .try-right {
-    padding: 2rem;
-    width: 50%;
-  }
-  
-  .try-btn {
-    background-color: #e6638a;
-    font-weight: 300;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "ProximaNovaRegular", Helvetica, sans-serif;
-    transition: all ease 0.5s;
-    font-size: 1rem;
-    padding: 9px 15px;
-    margin: 10px 16px 0px 0px;
-  }
-  
-  .try-btn:hover {
-    box-shadow: 0 0 10px 0 black;
-  }
-  
-  .try-left-text {
-    font-size: 2rem;
-    font-family: "ProximaNova", monospace;
-    font-weight: 300;
-    color: #2a3278;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .try {
-      flex-direction: column;
-      height: auto; 
-      gap: 2rem; 
-      margin: 2rem 1rem;
-    }
-  
-    .try-left img {
-      width: 50%;
-    }
-  
-    .try-right {
-      width: 100%;
-      padding: 1.5rem;
-    }
-  
-    .try-left-text {
-      font-size: 1.5rem;
-      padding: 0;
-    }
-  
-    .try-btn {
-      font-size: 0.9rem; 
-      padding: 8px 12px; 
-    }
-  }
-  
-  /*ctc end here*/
-
-
-/**Task Tracker Suite start here**/
-
-/* Section Styling */
-.task-tracker-suite{
-  padding: 3.75rem 6.25rem 0rem;
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  overflow: hidden;
-}
-
-/* Heading Style */
-.how-it-works-heading {
-  text-align: center;
-  font-size: 1.75rem;
-  color: #091c39;
-  font-family: "ProximaNova", monospace;
-  margin-bottom: 2rem;
-}
-
-/* General styling for each step */
-.how-it-works-step {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
-  align-items: center;
-  padding: 20px;
-}
-
-
-/* Image Styling */
-.step-img {
-  flex: 1;
-  max-width: 50%;
-}
-
-.step-img img {
-  max-width: 100%;
-}
-
-/* Text Styling */
-.step-text {
-  flex: 1;
-  width: 50%;
-  padding: 1rem;
-}
-
-.step-text h3 {
-  font-size: 1.5rem;
-  color: #091c39;
-  margin-bottom: 1rem;
-  font-family: "ProximaNova", monospace;
-}
-
-@media (max-width: 1024px) {
-  .task-tracker-suite {
-    padding: 2rem 1rem;
-  }
-
-  .how-it-works-heading {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .how-it-works-step {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .step-img {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .step-text {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1.5rem;
   }
 
-  .step-text h3 {
-    font-size: 1.25rem;
-  }
-
-  .step-text li{
-    text-align: start;
-  }
-}
-
-@media (max-width: 768px) {
-  .task-tracker-suite {
-    padding: 1.5rem 1rem;
-  }
-
-  .how-it-works-heading {
+  .try-left-text {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    padding: 0;
   }
 
-  .step-img {
-    max-width: 100%;
-  }
-
-  .step-text {
-    padding: 0.5rem;
-  }
-
-  .step-text h3 {
-    font-size: 1.8rem;
+  .try-btn {
+    font-size: 0.9rem; 
+    padding: 8px 12px; 
+    margin:0rem;
   }
 }
 
-@media (max-width: 480px) {
-  .task-tracker-suite {
-    padding: 1rem;
+@media (max-width: 960px) {
+  .try {
+    flex-direction: column;
+    height: auto; 
+    width: auto;
+    margin: 2rem 1rem;
+    padding: 0rem;
+    gap:0rem;
   }
 
-  .how-it-works-heading {
-    font-size: 1.25rem;
+  .try-left img {
+    width: 55%;
+    z-index: 1;
+    position: relative;
+    bottom:4rem;
   }
 
-  .step-text h3 {
-    font-size: 1.2rem;
+  .try-right {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .try-left-text {
+    font-size: 1.7rem;
+    padding-top: -2rem;
+    padding-bottom:2rem;
+  }
+
+  .try-btn {
+    font-size: 0.9rem; 
+    padding: 8px 12px; 
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .try {
+    flex-wrap: nowrap;
+    height: 30vh; 
+    gap: 2rem;
+    padding: 1rem; 
+  }
 
+  .try-left img {
+    width: 20vw; 
+    height: auto;
+  }
+
+  .try-right {
+    flex: 1;
+    max-width: 50%;
+    padding: 1rem; 
+    box-sizing: border-box;
+  }
+
+  .try-left-text {
+    font-size: 1.8rem; 
+    line-height: 1.3; 
+  }
+
+  .try-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+@media (max-width: 468px) {
+  .try {
+    flex-direction: column;
+    height:auto; 
+    margin: 2rem 1rem;
+    padding: 0rem;
+    gap:0rem;
+
+  }
+
+  .try-left img {
+    width: 55%;
+    z-index: 1;
+    position: relative;
+    bottom:4rem;
+  }
+
+  .try-right {
+    width: 100%;
+  padding-top:-20px;
+  }
+
+  .try-left-text {
+    font-size: 1rem;
+    padding-top: -2rem;
+    padding-bottom:2rem;
+  }
+
+  .try-btn {
+    font-size: 0.9rem;
+    margin-bottom:2rem;
+  }
+}
+  /*ctc end here*/
 
 .business-section{
   padding: 3.75rem 6.25rem 0rem;
@@ -890,7 +961,7 @@ width: 100%;
   font-size: 1.4rem;
   font-weight: 900;
   color: #091C39;
-  font-family: "ProximaNova";
+  font-family: ProximaNovaaltBold;
 }
 
 .more-task-itme img {
@@ -904,7 +975,7 @@ width: 100%;
   text-align: center;
   font-size: 1.75rem;
   color: #091C39;
-  font-family: "ProximaNova";
+  font-family: ProximaNovaaltBold;
   margin-top: 2.4rem;
 }
 
@@ -912,7 +983,7 @@ width: 100%;
   text-align: center;
   padding: 1.2rem;
   font-size: 1.1rem;
-  font-family: "ProximaNovaRegular";
+  font-family: ProximaNovaaltRegular;
   color: #666666;
 }
 
@@ -951,3 +1022,4 @@ width: 100%;
 }
 
 /* more-task end here */
+
