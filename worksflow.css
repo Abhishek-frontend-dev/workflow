@@ -745,7 +745,9 @@ width: 100%;
     color: #0078D7;
   }
   
-    /*try start*/
+   /*try start*/
+
+/* Try Section Styling */
 .try {
   display: flex;
   height: 30vh;
@@ -779,6 +781,7 @@ width: 100%;
   font-size: 1rem;
   padding: 9px 15px;
   margin: 10px 16px 0px 0px;
+  text-decoration: none;
 }
 
 .try-btn:hover {
@@ -790,10 +793,10 @@ width: 100%;
   font-family: ProximaNovaaltBold, monospace;
   font-weight: 300;
   color: #f9f9f9;
+  padding-bottom: 2rem;
 }
 
-/* Media Queries for Responsiveness */
-
+/* Responsive Styling */
 @media (max-width: 1279px) {
   .try {
     display: flex;
@@ -828,21 +831,16 @@ width: 100%;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .try {
     flex-direction: column;
     height: auto; 
-    width: auto;
+    gap: 2rem; 
     margin: 2rem 1rem;
-    padding: 0rem;
-    gap:0rem;
   }
 
   .try-left img {
-    width: 55%;
-    z-index: 1;
-    position: relative;
-    bottom:4rem;
+    width: 50%;
   }
 
   .try-right {
@@ -851,9 +849,8 @@ width: 100%;
   }
 
   .try-left-text {
-    font-size: 1.7rem;
-    padding-top: -2rem;
-    padding-bottom:2rem;
+    font-size: 1.5rem;
+    padding: 0;
   }
 
   .try-btn {
