@@ -239,6 +239,10 @@ strong{
     width: 50vw;
 
   }
+.left:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
   .left img{
 width: 100%;
@@ -473,6 +477,10 @@ width: 100%;
 .step-img {
   flex: 1;
   max-width: 40%;
+}
+.step-img:hover{
+transform: scale(1.1);
+cursor: pointer;
 }
 
 .step-img img {
